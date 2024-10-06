@@ -1,8 +1,10 @@
+import { Layout } from "../../Components/Layout"
+
 function NotFound() {
     return (
-        <div className='bg-green-300'>
-        Not Found
-        </div>
+        <Layout>
+            Not Found
+        </Layout>
     )
 }
 
