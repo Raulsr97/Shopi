@@ -1,3 +1,4 @@
+import { ShoppingBagIcon } from '@heroicons/react/24/solid'
 import { NavLink } from "react-router-dom"
 import '../../Pages/App/App.css'
 import { useContext } from "react"
@@ -8,7 +9,7 @@ const NavBar = () => {
   const style = 'underline underline-offset-4'
 
   return(
-    <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light">
+    <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-white border-b-2">
       <ul className="flex items-center gap-3">
         <li className="font-semibold text-lg">
           <NavLink 
@@ -94,8 +95,8 @@ const NavBar = () => {
             Sign In
           </NavLink>
         </li>
-        <li>
-          🛍️ {count}
+        <li className='flex gap-1'>
+          <ShoppingBagIcon className='size-4 text-black' /> {count}
         </li>
       </ul>
     </nav>
