@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react"
+import { useContext } from "react"
 import { Layout } from "../../Components/Layout"
 import { Card } from "../../Components/Card"
 import { ProductDetail } from "../../Components/ProductDetail"
+import { ShoppingCartContext } from "../../Context"
 
 function Home() {
     
-    const [items, setItems] = useState(null)
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch('https://fakestoreapi.com/products')
-            const data = await response.json()
-            setItems(data)
-        }
-
-        fetchData()
-    }, [])
+    const { items } = useContext(ShoppingCartContext)
 
     return (
         <Layout>
